@@ -14,7 +14,7 @@
 <a href="https://weather-inf.web.app">weather inf</a>, is made for tracking the weather information in your locality and some approximate details of this, such as the minimum temperature, pressure, wind speed, humidity, etc... The information is received through calls to the official API of <a href="http://openweathermap.org/">open-weather-map</a>, returned in JSON format and processed to be rendered directly in the web page.
 
 ### Data fetching
-&nbsp; To fetch current weather data from the server, is defined an asynchronous function and called from useEffect React hook to recieve a response in JSON format to unpack in the main page, you could check the parameters that are passed inside the fetch() call, i. e. find?q=${city}&lat=${lat}&lon=${long} where {city}, {lat, long} are one  of requiere's to proccess current weather, more information here <a href="`https://community-open-weather-map.p.rapidapi.com/">community-open-weather-map</a>. 
+&nbsp; To fetch current weather data from the server, is defined an asynchronous function and called from useEffect React hook to recieve a response in JSON format to unpack in the main page, you could check the parameters that are passed inside the fetch() call, i. e. find?q=${city}&lat=${lat}&lon=${long} where {city}, {lat, long} are one  of requiere's to proccess current weather, more information here <a href="https://community-open-weather-map.p.rapidapi.com" rel="noopener" target="_blank"> community-open-weather-map</a>. 
 
     // This gets called on every request
     async function fetchCurrentWeather(lat, long, city) {
@@ -31,6 +31,7 @@
       })
 
 <br>
+
 ### Run locally
 &nbsp; To run this project locally it is necessary to install all the necessary dependencies (please pay attention), some of which may be missing and you will have to install manually on your computer.
 
