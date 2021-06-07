@@ -177,7 +177,7 @@ async function getCity(lat, long) {
       <footer className="footer">
       <>
       </footer>
-       <p className="text-center" style={{color: "#000"}}> Made by &nbsp; <a href="https://twitter.com/blaessster"> @blaessster</a></p>
+       <p className="text-center" style={{color: "#000"}}> Made by <a href=""> </a></p>
       </>
     )}
     </div>
