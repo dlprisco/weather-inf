@@ -32,6 +32,31 @@
 
 <br>
 
+&nbsp; Rest of function's body, here are all hooks used to store core weather details after *fetch()* call. <br>
+      
+      .
+      .
+      .
+      // Fetched data
+      const data = await res.json();
+
+      // Weather's current data 
+      setCity(data.list[0].name);
+      setTemperature(data.list[0].main.temp);
+      setCondition(data.list[0].weather[0].main);
+      setDescription(data.list[0].weather[0].description);
+      setCountry(data.list[0].sys.country);
+      setFeelsLike(data.list[0].main.feels_like);
+      setWindKM(data.list[0].wind.speed * 3.6);
+      setClouds(data.list[0].clouds.all);
+      setPressure(data.list[0].main.pressure);
+      setHumidity(data.list[0].main.humidity);
+
+      // Stop showing loading screen...
+      setLoading(false);
+    }
+
+
 ### Run locally
 &nbsp; To run this project locally it is necessary to install all the necessary dependencies (please pay attention), some of which may be missing and you will have to install manually on your computer.
 
