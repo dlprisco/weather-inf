@@ -47,7 +47,6 @@ export default function App() {
     async function fetchCurrentWeather(lat, long, city) {
 
       // Fetch data from external API
-      console.log('lat, long and location: ', lat, long, city)
       const res = await fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${city}&lat=${lat}&lon=${long}t&id=2172797&lang=null&units=metric&mode=xml%2C%20html`, {
         "method": "GET",
         "headers": {
@@ -57,20 +56,25 @@ export default function App() {
         }
       })
 
-    const data = await res.json()
-    console.log(data);
-    setCity(data.list[0].name)
-    setTemperature(data.list[0].main.temp)
-    setCondition(data.list[0].weather[0].main);
-    setDescription(data.list[0].weather[0].description);
-    setCountry(data.list[0].sys.country);
-    setFeelsLike(data.list[0].main.feels_like);
-    setWindKM(data.list[0].wind.speed * 3.6);
-    setClouds(data.list[0].clouds.all);
-    setPressure(data.list[0].main.pressure);
-    setHumidity(data.list[0].main.humidity);
+      // Fetched data
+      const data = await res.json();
 
-    setLoading(false);
+      // Weather's current data 
+      setCity(data.list[0].name);
+      setTemperature(data.list[0].main.temp);
+      setCondition(data.list[0].weather[0].main);
+      setDescription(data.list[0].weather[0].description);
+      setCountry(data.list[0].sys.country);
+      setFeelsLike(data.list[0].main.feels_like);
+      setWindKM(data.list[0].wind.speed * 3.6);
+      setClouds(data.list[0].clouds.all);
+      setPressure(data.list[0].main.pressure);
+      setHumidity(data.list[0].main.humidity);
+
+      // Stop showing loading screen...
+      setLoading(false);
+    }
+
   }
 
 // Step 2: Get city name
@@ -84,8 +88,6 @@ async function getCity(lat, long) {
   data = await res.json();
 
   if (data) {
-    console.log("Response: ", data);
-        
     if (data.address.city) {
       loc =  data.address.city;
     }
