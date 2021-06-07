@@ -1,0 +1,13 @@
+[debug] [2021-06-07T00:38:23.645Z] ----------------------------------------------------------------------
+[debug] [2021-06-07T00:38:23.708Z] Command:       C:\Users\pc\DOWNLO~1\Programs\firebase-tools-instant-win.exe C:\Users\pc\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy
+[debug] [2021-06-07T00:38:23.710Z] CLI Version:   9.10.1
+[debug] [2021-06-07T00:38:23.711Z] Platform:      win32
+[debug] [2021-06-07T00:38:23.712Z] Node Version:  v12.18.1
+[debug] [2021-06-07T00:38:24.309Z] Time:          Sun Jun 06 2021 20:38:23 GMT-0400 (Venezuela Time)
+[debug] [2021-06-07T00:38:24.310Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-07T00:38:24.478Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-07T00:38:24.482Z] > authorizing via signed-in user (danielprisco09@gmail.com)
+[debug] [2021-06-07T00:38:24.483Z] [iam] checking project weather-inf for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-07T00:38:24.591Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-inf:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
