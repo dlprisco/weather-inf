@@ -51,9 +51,8 @@ export default function App() {
       const res = await fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${city}&lat=${lat}&lon=${long}t&id=2172797&lang=null&units=metric&mode=xml%2C%20html`, {
         "method": "GET",
         "headers": {
-          "x-rapidapi-key":     "63dd478a7dmshe52eabcc05d930fp19c88bjsn3cf1059cbc6a",
-          "x-rapidapi-host":
-          "community-open-weather-map.p.rapidapi.com",
+          "x-rapidapi-key":  "",
+          "x-rapidapi-host": "",
           "content-type": "application/json",
         }
       })
