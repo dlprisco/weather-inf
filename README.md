@@ -2,5 +2,4 @@
 🌨️ Web application for monitoring local climate
 
 # Overview
-
-(weather inf)[https://weather-inf.web.app], is made for tracking the weather information in your locality and some approximate details of this, such as the minimum temperature, pressure, wind speed, humidity, etc ... the information is received through calls to the official API of ( open-weather-map) [http://openweathermap.org/], returned in JSON format and processed to be rendered directly in the web page.
+<a href="https://weather-inf.web.app">weather inf</a>, is made for tracking the weather information in your locality and some approximate details of this, such as the minimum temperature, pressure, wind speed, humidity, etc ... the information is received through calls to the official API of <a href="http://openweathermap.org/">open-weather-map</a>, returned in JSON format and processed to be rendered directly in the web page.
