@@ -6,7 +6,7 @@ import { weatherConditions, weatherIcons } from './utils/weatherConditions.js';
 
 import './App.css';
 import Head from 'next/head';
-const API_TOKEN = 'pk.dff7a446bdbd1ca60308712ce0bdedd0';
+const API_TOKEN = '';
 
 export default function App() {
 
