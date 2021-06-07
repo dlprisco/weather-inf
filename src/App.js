@@ -26,9 +26,9 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getStaticProps();
+    fetchStaticData();
 
-    async function getStaticProps() {
+    async function fetchStaticData() {
       
       async function success(pos) {
         var crd = pos.coords;
@@ -44,7 +44,7 @@ export default function App() {
     }
    
     // This gets called on every request
-    async function getServerSideProps(lat, long, city) {
+    async function fetchCurrentWeather(lat, long, city) {
 
       // Fetch data from external API
       console.log('lat, long and location: ', lat, long, city)
@@ -92,7 +92,7 @@ async function getCity(lat, long) {
     loc = data.address.town;
 
   }
-  const dataFetcher = getServerSideProps(lat, long, loc);
+  const dataFetcher = fetchCurrentWeather(lat, long, loc);
   return dataFetcher
 }
   }, [city, temperature])
