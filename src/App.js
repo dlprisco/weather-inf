@@ -11,9 +11,6 @@ const API_TOKEN = 'pk.dff7a446bdbd1ca60308712ce0bdedd0';
 const APIID = "87eb04e63a1d2d86f382d92a06242e9c";
 
 export default function App() {
-
-  const [city, setCity] = useState([]);
-
   const [latitude, setLatitude] = useState([]);
   const [longitude, setLongitude] = useState([]);
 
@@ -85,7 +82,7 @@ export default function App() {
       }
       fetchCurrentWeather(lat, long, loc);
     }
-  }, [city, loading, weatherData])
+  }, [loading, weatherData])
     
   return (
       <div className="container">
