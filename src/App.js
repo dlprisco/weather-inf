@@ -46,7 +46,7 @@ export default function App() {
 
           const mappedData = {
             description: data.weather[0].description,
-            temperature: Math.round(data.main.temp),
+            temperature: data.main.temp,
             country:data.sys.country,
             city: data.name,
             condition: data.weather[0].main,
