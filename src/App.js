@@ -161,7 +161,7 @@ export default function App() {
           </div>
         </main>
         <footer className="footer">
-          Made by &nbsp; <a href="https://twitter.com/blaessster">@blaessster</a>
+          <p>Made by &nbsp; <a href="https://twitter.com/blaessster">@blaessster</a></p>
         </footer>
       </>
     )}
