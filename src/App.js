@@ -42,7 +42,7 @@ export default function App() {
     async function fetchCurrentWeather(lat, long, city) {
 
       // Fetch data from external API
-      await fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&lat=${lat}&lon=${long}&units=metric&APPID=${APIID}`).then(res => { return res.json()}).then(data => {
+      await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIID}`).then(res => { return res.json()}).then(data => {
 
           const mappedData = {
             description: data.list[0].weather[0].description,
