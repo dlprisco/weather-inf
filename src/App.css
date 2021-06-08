@@ -247,18 +247,26 @@ body {
   border-color: #0070f3;
 }
 
-.card h2 p:hover,
-.card h2 p:focus,
-.card h2 p:active {
+
+.card h2:hover, 
+.card h2:focus,
+.card h2:active {
   color: #0070f3;
   border-color: #0070f3;
 }
-
 .footer p:hover,
 .footer p:focus,
 .footer p:active {
   color: #0085f3;
 }
+
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+  color: #0085f3;
+}
+
 
 .footer p {
   color: #000;
