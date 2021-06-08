@@ -85,7 +85,7 @@ export default function App() {
       }
       fetchCurrentWeather(lat, long, loc);
     }
-  }, [city])
+  }, [city, loading, weatherData])
     
   return (
       <div className="container">
