@@ -42,19 +42,19 @@ export default function App() {
     async function fetchCurrentWeather(lat, long, city) {
 
       // Fetch data from external API
-      await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${APIID}`).then(res => { return res.json()}).then(data => {
+      await fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&units=metric&APPID=${APIID}`).then(res => { return res.json()}).then(data => {
 
           const mappedData = {
-            description: data.weather[0].description,
-            temperature: data.main.temp,
-            country:data.sys.country,
-            city: data.name,
-            condition: data.weather[0].main,
-            feelsLike : data.main.feels_like,
-            windKm: data.wind.speed * 3.6,
-            clouds:data.clouds.all,
-            pressure: data.main.pressure,
-            humidity: data.main.humidity,
+            description: data.list[0].weather[0].description,
+            temperature: data.list[0].main.temp,
+            country:data.list[0].sys.country,
+            city: data.list[0].name,
+            condition: data.list[0].weather[0].main,
+            feelsLike : data.list[0].main.feels_like,
+            windKm: data.list[0].wind.speed * 3.6,
+            clouds:data.list[0].clouds.all,
+            pressure: data.list[0].main.pressure,
+            humidity: data.list[0].main.humidity,
           }
           setWeatherData(mappedData);
           setLoading(false);
