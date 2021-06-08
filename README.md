@@ -15,47 +15,30 @@
 
 ### Data fetching
 &nbsp; To fetch current weather data from the server, is defined an asynchronous function and called from useEffect React hook to recieve a response in JSON format to unpack in the main page, you could check the parameters that are passed inside the fetch() call, i. e. **q=${city} &lat=${lat} &lon=${long}** where {city}, {lat}, {long} are one  of requiere's to proccess current weather.
-
+   
     // This gets called on every request
     async function fetchCurrentWeather(lat, long, city) {
 
-      // Fetch data from external API
-      console.log('lat, long and location: ', lat, long, city)
-      const res = await fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${city}&lat=${lat}&lon=${long}t&id=2172797&lang=null&units=metric&mode=xml%2C%20html`, {
-        "method": "GET",
-        "headers": {
-          "x-rapidapi-key":  "YOUR_SECRET_KEY",
-          "x-rapidapi-host": "HOSTING_WEBSITE",
-          "content-type": "application/json",
-        }
-      })
-
-<br>
-
-&nbsp; Rest of function's body, here are all hooks used to store core weather details after *fetch()* call. <br>
-      
-      .
-      .
-      .
-      // Fetched data
-      const data = await res.json();
-
-      // Weather's current data 
-      setCity(data.list[0].name);
-      setTemperature(data.list[0].main.temp);
-      setCondition(data.list[0].weather[0].main);
-      setDescription(data.list[0].weather[0].description);
-      setCountry(data.list[0].sys.country);
-      setFeelsLike(data.list[0].main.feels_like);
-      setWindKM(data.list[0].wind.speed * 3.6);
-      setClouds(data.list[0].clouds.all);
-      setPressure(data.list[0].main.pressure);
-      setHumidity(data.list[0].main.humidity);
-
-      // Stop showing loading screen...
-      setLoading(false);
+       // Fetch data from external API
+       const res = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&lat=${lat}&lon=${long}&units=metric&APPID=${APIID}`)
+                         .then(res => { return res.json()})
+                         .then(data => {
+                             const mappedData = {
+                               description: data.list[0].weather[0].description,
+                               temperature: data.list[0].main.temp,
+                               country:data.list[0].sys.country,
+                               city: data.list[0].name,
+                               condition: data.list[0].weather[0].main,
+                               feelsLike : data.list[0].main.feels_like,
+                               windKm: data.list[0].wind.speed * 3.6,
+                               clouds:data.list[0].clouds.all,
+                               pressure: data.list[0].main.pressure,
+                               humidity: data.list[0].main.humidity,
+                             }
+                         setWeatherData(mappedData);
+                         setLoading(false);
+                       });
     }
-
 
 ### Run locally
 &nbsp; To run this project locally it is necessary to install all the necessary dependencies (please pay attention), some of which may be missing and you will have to install manually on your computer.
