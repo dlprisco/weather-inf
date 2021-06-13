@@ -37,7 +37,7 @@
                              }
                          setWeatherData(mappedData);
                          setLoading(false);
-                       });
+            });
     }
 
 ### Run locally
