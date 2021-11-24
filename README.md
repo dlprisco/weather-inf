@@ -2,7 +2,7 @@
 <br>
 
 <h1>Weather-inf</h1>
-🌨️ Web application for monitoring local climate
+🌨️ Small website to monitoring local climate
 
 <br>
 
@@ -37,7 +37,7 @@
     }
 
 ### Run locally
-&nbsp; To run this project locally it is necessary to install all the necessary dependencies (please pay attention), some of which may be missing and you will have to install manually on your computer.
+&nbsp; To run this project locally it is necessary to install all the necessary dependencies, some of which may be missing and you will have to install manually on your computer.
 
 yarn: <br>
 
@@ -50,15 +50,6 @@ npm: <br>
     npm install
     ...
     npm start
-
-
-### Built for production
-&nbsp; build web for production
-
-    yarn run build
-or
-
-    npm run build
 
 ### Bug report
 &nbsp; You can send me a message to my email with any suggestion or in case of error, you would help me a lot.
