@@ -8,7 +8,7 @@ import './App.css';
 import Head from 'next/head';
 
 const API_TOKEN = 'pk.dff7a446bdbd1ca60308712ce0bdedd0';
-const APIID = "87eb04e63a1d2d86f382d92a06242e9c";
+const APIID = "5a706f4605511ea6ad2c06c7a71d60e2";
 
 export default function App() {
   const [latitude, setLatitude] = useState([]);
@@ -161,7 +161,7 @@ export default function App() {
           </div>
         </main>
         <footer className="footer">
-          <p>Made by &nbsp; <a href="https://twitter.com/blaessster">@blaessster</a></p>
+          <p>Made by &nbsp; <a href="https://dlprisco.github.com/projects/">@me</a></p>
         </footer>
       </>
     )}
